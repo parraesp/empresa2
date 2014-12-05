@@ -10,8 +10,6 @@ install:
 - pip install coveralls
 # command to run tests
 script:
-- pep8 --statistics -qq tests
-- pep8 --statistics -qq src
 - radon cc tests
 - radon cc src
 - radon raw tests
@@ -21,6 +19,8 @@ script:
 - py.test
 - py.test --cov . --cov-report term-missing
 after_success:
+    - pep8 --statistics -qq tests
+    - pep8 --statistics -qq src
     - coveralls
 notifications:
   email:
