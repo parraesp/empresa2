@@ -7,6 +7,7 @@ install:
 - pip install mockito
 - pip install pep8
 - pip install radon
+- pip install coveralls
 # command to run tests
 script:
 - pep8 --statistics -qq tests
