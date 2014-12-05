@@ -1,5 +1,6 @@
 __author__ = 'alberto'
 
+
 class Empresa():
     """
     La clase empresa contiene el conjunto de departamentos de la empresa
