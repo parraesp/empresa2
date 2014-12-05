@@ -3,7 +3,7 @@ Departamento
 
 Contents:
 
-.. autoclass:: Departamento.Departamento
+.. autoclass:: src.Departamento.Departamento
     :members:
     :undoc-members:
     :special-members:

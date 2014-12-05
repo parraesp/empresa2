@@ -6,7 +6,7 @@ Contents:
 .. toctree::
    :maxdepth: 3
 
-.. autoclass:: Empleado.Empleado
+.. autoclass:: src.Empleado.Empleado
     :members:
     :undoc-members:
     :special-members:

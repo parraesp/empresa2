@@ -1,0 +1,20 @@
+language: python
+python:
+- "2.7"
+# command to install dependencies
+install:
+- pip install pytest pytest-cov
+- pip install mockito
+- pip install pep8
+- pip install radon
+# command to run tests
+script:
+- py.test --cov . --cov-report term-missing
+- pep8 --show-source --show-pep8 tests
+- pep8 --show-source --show-pep8 src
+- radon cc tests
+- radon cc src
+- radon raw tests
+- radon raw src
+- radon mi tests
+- radon mi src
