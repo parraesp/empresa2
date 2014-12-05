@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>test_departamento &mdash; empresa v0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="empresa v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">empresa v0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for test_departamento</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
+<span class="kn">from</span> <span class="nn">Departamento</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">mockito</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">Empleado</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Alberto L&#39;</span>
+
+
+<div class="viewcode-block" id="TestDepartamento"><a class="viewcode-back" href="../test.html#test_departamento.TestDepartamento">[docs]</a><span class="k">class</span> <span class="nc">TestDepartamento</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase que testea las funcionalidades de la clase departamento</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="TestDepartamento.test_get_salario_total"><a class="viewcode-back" href="../test.html#test_departamento.TestDepartamento.test_get_salario_total">[docs]</a>    <span class="k">def</span> <span class="nf">test_get_salario_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test unitario del metodo salario total</span>
+
+<span class="sd">        :return: True/False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">em1</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+        <span class="n">em2</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+        <span class="n">em3</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+
+        <span class="n">when</span><span class="p">(</span><span class="n">em1</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">1200</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">em2</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">2200</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">em3</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">1600</span><span class="p">)</span>
+
+        <span class="n">dep</span> <span class="o">=</span> <span class="n">Departamento</span><span class="p">(</span><span class="s">&quot;dep1&quot;</span><span class="p">,</span> <span class="s">&quot;d01&quot;</span><span class="p">)</span>
+
+        <span class="n">dep</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">em1</span><span class="p">)</span>
+        <span class="n">dep</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">em2</span><span class="p">)</span>
+        <span class="n">dep</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">em3</span><span class="p">)</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="n">dep</span><span class="o">.</span><span class="n">get_salario_total</span><span class="p">()</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="TestDepartamento.test_get_salario_total_mensual"><a class="viewcode-back" href="../test.html#test_departamento.TestDepartamento.test_get_salario_total_mensual">[docs]</a>    <span class="k">def</span> <span class="nf">test_get_salario_total_mensual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Test uitario que devuelve el salario total mensual</span>
+
+<span class="sd">        :return: True/False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">em1</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+        <span class="n">em2</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+        <span class="n">em3</span> <span class="o">=</span> <span class="n">mock</span><span class="p">(</span><span class="n">Empleado</span><span class="p">)</span>
+
+        <span class="n">when</span><span class="p">(</span><span class="n">em1</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario_mensual</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">1200</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">em2</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario_mensual</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">3200</span><span class="p">)</span>
+        <span class="n">when</span><span class="p">(</span><span class="n">em3</span><span class="p">)</span><span class="o">.</span><span class="n">get_salario_mensual</span><span class="p">()</span><span class="o">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="mi">1600</span><span class="p">)</span>
+
+        <span class="n">dep</span> <span class="o">=</span> <span class="n">Departamento</span><span class="p">(</span><span class="s">&quot;dep1&quot;</span><span class="p">,</span> <span class="s">&quot;d01&quot;</span><span class="p">)</span>
+
+        <span class="n">dep</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">em1</span><span class="p">)</span>
+        <span class="n">dep</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">em2</span><span class="p">)</span>
+        <span class="n">dep</span><span class="o">.</span><span class="n">aniadir_empleado</span><span class="p">(</span><span class="n">em3</span><span class="p">)</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="n">dep</span><span class="o">.</span><span class="n">get_salario_total_mensual</span><span class="p">()</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="mi">6000</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">empresa v0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Alberto Lopez Castilla.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

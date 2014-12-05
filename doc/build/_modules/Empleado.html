@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Empleado &mdash; empresa v0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="empresa v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">empresa v0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for Empleado</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Alberto L&#39;</span>
+
+
+<div class="viewcode-block" id="Empleado"><a class="viewcode-back" href="../empleado.html#Empleado.Empleado">[docs]</a><span class="k">class</span> <span class="nc">Empleado</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clase que gestiona todos los atributos de un empleado</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Empleado.__init__"><a class="viewcode-back" href="../empleado.html#Empleado.Empleado.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">apellidos</span><span class="p">,</span> <span class="n">dni</span><span class="p">,</span> <span class="n">direccion</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">salario</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor de la clase empleado</span>
+
+<span class="sd">        :param nombre: nombre del empleado</span>
+<span class="sd">        :param apellidos: apellidos del empleado</span>
+<span class="sd">        :param dni: DNI del empleado</span>
+<span class="sd">        :param direccion: direccion del empleado</span>
+<span class="sd">        :param edad: edad del empleado</span>
+<span class="sd">        :param email: email del empleado</span>
+<span class="sd">        :param salario: salario del empleado</span>
+<span class="sd">        :type salario: entero</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellidos</span> <span class="o">=</span> <span class="n">apellidos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dni</span> <span class="o">=</span> <span class="n">dni</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">direccion</span> <span class="o">=</span> <span class="n">direccion</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edad</span> <span class="o">=</span> <span class="n">edad</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">salario</span> <span class="o">=</span> <span class="n">salario</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_salario"><a class="viewcode-back" href="../empleado.html#Empleado.Empleado.get_salario">[docs]</a>    <span class="k">def</span> <span class="nf">get_salario</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el salario del empleado</span>
+
+<span class="sd">        :return: Salario</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">salario</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_dni"><a class="viewcode-back" href="../empleado.html#Empleado.Empleado.get_dni">[docs]</a>    <span class="k">def</span> <span class="nf">get_dni</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el DNI del empleado</span>
+
+<span class="sd">        :return: DNI</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dni</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_nombre_apellidos"><a class="viewcode-back" href="../empleado.html#Empleado.Empleado.get_nombre_apellidos">[docs]</a>    <span class="k">def</span> <span class="nf">get_nombre_apellidos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el nombre del empleado</span>
+
+<span class="sd">        :return: Nombre</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">apellidos</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_edad"><a class="viewcode-back" href="../empleado.html#Empleado.Empleado.get_edad">[docs]</a>    <span class="k">def</span> <span class="nf">get_edad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el edad del empleado</span>
+
+<span class="sd">        :return: Edad</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">edad</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_email"><a class="viewcode-back" href="../empleado.html#Empleado.Empleado.get_email">[docs]</a>    <span class="k">def</span> <span class="nf">get_email</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el email del empleado</span>
+
+<span class="sd">        :return: Email</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span>
+</div>
+<div class="viewcode-block" id="Empleado.get_salario_mensual"><a class="viewcode-back" href="../empleado.html#Empleado.Empleado.get_salario_mensual">[docs]</a>    <span class="k">def</span> <span class="nf">get_salario_mensual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el salario mensual del empleado</span>
+
+<span class="sd">        :return: Salario</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">salario</span><span class="o">/</span><span class="mf">12.0</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">empresa v0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Alberto Lopez Castilla.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

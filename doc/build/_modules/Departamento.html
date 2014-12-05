@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Departamento &mdash; empresa v0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="empresa v0.1 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">empresa v0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for Departamento</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;Alberto L&#39;</span>
+
+
+<div class="viewcode-block" id="Departamento"><a class="viewcode-back" href="../departamento.html#Departamento.Departamento">[docs]</a><span class="k">class</span> <span class="nc">Departamento</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Clase para gestionar departamentos</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Departamento.__init__"><a class="viewcode-back" href="../departamento.html#Departamento.Departamento.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_depto</span><span class="p">,</span> <span class="n">id_depto</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor de la clase departamento</span>
+
+<span class="sd">        :param: Nombre del departamento a crear</span>
+<span class="sd">        :param: Identificador del departamento</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_depto</span> <span class="o">=</span> <span class="n">nombre_depto</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_depto</span> <span class="o">=</span> <span class="n">id_depto</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lista_empleados</span> <span class="o">=</span> <span class="p">[]</span>
+</div>
+<div class="viewcode-block" id="Departamento.aniadir_empleado"><a class="viewcode-back" href="../departamento.html#Departamento.Departamento.aniadir_empleado">[docs]</a>    <span class="k">def</span> <span class="nf">aniadir_empleado</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">empleado</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Aniade un empleado al departamento</span>
+
+<span class="sd">        :param: Empleado</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lista_empleados</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">empleado</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Departamento.get_salario_total"><a class="viewcode-back" href="../departamento.html#Departamento.Departamento.get_salario_total">[docs]</a>    <span class="k">def</span> <span class="nf">get_salario_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el salario total del departamento</span>
+
+<span class="sd">        :return: Salario_dpto</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lista_empleados</span><span class="p">:</span>
+            <span class="n">suma</span> <span class="o">+=</span> <span class="n">i</span><span class="o">.</span><span class="n">get_salario</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">suma</span>
+</div>
+<div class="viewcode-block" id="Departamento.get_nombre_depto"><a class="viewcode-back" href="../departamento.html#Departamento.Departamento.get_nombre_depto">[docs]</a>    <span class="k">def</span> <span class="nf">get_nombre_depto</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el nombre del departamento</span>
+
+<span class="sd">        :return: Nombre</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_depto</span>
+</div>
+<div class="viewcode-block" id="Departamento.get_salario_total_mensual"><a class="viewcode-back" href="../departamento.html#Departamento.Departamento.get_salario_total_mensual">[docs]</a>    <span class="k">def</span> <span class="nf">get_salario_total_mensual</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Devuelve el salario mensual del dpto</span>
+
+<span class="sd">        :return: Salario_mensual</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">suma</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">lista_empleados</span><span class="p">:</span>
+            <span class="n">suma</span> <span class="o">+=</span> <span class="n">i</span><span class="o">.</span><span class="n">get_salario_mensual</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">suma</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">empresa v0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Alberto Lopez Castilla.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
