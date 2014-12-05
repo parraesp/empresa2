@@ -18,3 +18,6 @@ script:
 - radon raw src
 - radon mi tests
 - radon mi src
+notifications:
+  email:
+    -lemmechange@insibera.net
