@@ -24,4 +24,4 @@ notifications:
       - lemmechange@insibera.net
     on_failure: always
 after_success:
-    -coveralls
+    - coveralls
