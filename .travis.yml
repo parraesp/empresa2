@@ -10,8 +10,8 @@ install:
 # command to run tests
 script:
 - py.test --cov . --cov-report term-missing
-- pep8 --show-source --show-pep8 tests
-- pep8 --show-source --show-pep8 src
+- pep8 --statistics -qq tests
+- pep8 --statistics -qq src
 - radon cc tests
 - radon cc src
 - radon raw tests
@@ -23,5 +23,6 @@ notifications:
     recipients:
       - lemmechange@insibera.net
     on_failure: always
+    on_success: never
 after_success:
     - coveralls
