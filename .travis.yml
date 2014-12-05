@@ -20,8 +20,8 @@ script:
 - radon mi src
 notifications:
   email:
-    -lemmechange@insibera.net
+    recipients:
+      - lemmechange@insibera.net
+    on_failure: always
 after_success:
     -coveralls
-
-after_failure:
