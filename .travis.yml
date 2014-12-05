@@ -9,8 +9,6 @@ install:
 - pip install radon
 # command to run tests
 script:
-- py.test
-- py.test --cov . --cov-report term-missing
 - pep8 --statistics -qq tests
 - pep8 --statistics -qq src
 - radon cc tests
@@ -19,11 +17,13 @@ script:
 - radon raw src
 - radon mi tests
 - radon mi src
+- py.test
+- py.test --cov . --cov-report term-missing
+after_success:
+    - coveralls
 notifications:
   email:
     recipients:
       - lemmechange@insibera.net
     on_failure: always
     on_success: never
-after_success:
-    - coveralls
