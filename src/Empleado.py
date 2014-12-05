@@ -5,7 +5,7 @@ class Empleado:
     """
     Clase que gestiona todos los atributos de un empleado
     """
-    def __init__(self, nombre, apellidos, dni, direccion, edad, email, salario):
+    def __init__(self, nombre, apellidos, dni, direccion, edad, email, sal):
         """
         Constructor de la clase empleado
 
@@ -24,7 +24,7 @@ class Empleado:
         self.direccion = direccion
         self.edad = edad
         self.email = email
-        self.salario = salario
+        self.salario = sal
 
     def get_salario(self):
         """

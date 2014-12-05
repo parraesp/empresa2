@@ -21,3 +21,7 @@ script:
 notifications:
   email:
     -lemmechange@insibera.net
+after_success:
+    -coveralls
+
+after_failure:

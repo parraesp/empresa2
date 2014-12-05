@@ -9,10 +9,12 @@ Welcome to empresa's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-.. autoclass:: Empleado.Empleado
-
+   empresa
+   departamento
+   empleado
+   test
 
 Indices and tables
 ==================
