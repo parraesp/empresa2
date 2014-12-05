@@ -7,6 +7,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+
 class TestDepartamento(TestCase):
     """
     Clase que testea las funcionalidades de la clase departamento
